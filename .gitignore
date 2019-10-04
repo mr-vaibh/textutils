@@ -1,1 +1,6 @@
 textutils/__pycache__
+requirements.txt
+runtime.txt
+README.md
+Procfile
+db.sqlite3

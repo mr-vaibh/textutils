@@ -5,11 +5,8 @@ from django.shortcuts import render
 def index(request):
 	return render(request, 'index.html')
 
-def about(request):
-	print(request.GET.get('text', 'default'))
-	return HttpResponse("About to launch ;)")
-
 def removepunc(request):
+	djtext = request.GET.get('text', 'default')
 	return HttpResponse('remove punctuations')
 
 def newlineremove(request):
@@ -23,3 +20,7 @@ def spaceremover(request):
 
 def charcount(request):
 	return HttpResponse('character count')
+
+
+def about(request):
+	return HttpResponse("About to launch ;)")

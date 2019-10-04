@@ -6,6 +6,7 @@ def index(request):
 	return render(request, 'index.html')
 
 def about(request):
+	print(request.GET.get('text', 'default'))
 	return HttpResponse("About to launch ;)")
 
 def removepunc(request):

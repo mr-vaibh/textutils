@@ -46,7 +46,8 @@
 
 
   <div class="container">
-    <form action="\analyze" method="GET">
+    <form action="\analyze" method="POST">
+        {% csrf_token %}
           <div class="form-group">
             <label for="text">Enter text here and let TextUtils do the magic</label>
             <textarea class="form-control" name="text" id="text" rows="7"></textarea>
